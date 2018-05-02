@@ -6,23 +6,23 @@
 #
 # Examples
 #
-#   next_number (4, 7)
-#   # => 4
-# Returns the lesser of the two interger.
+#   minofthree (4, 7, 2)
+#   # => 2
+# Returns the lesser of the three intergers
 
 def minofthree(num1, num2, num3)
-if num1 < num2
-    if num1 < num3
-        return num1
+    if num1 < num2
+        if num1 < num3
+            return num1
+        else
+            return num3
+        end
     else
-        return num3
+        if num2 < num3
+            return num2
+        else
+            return num3
+        end
     end
-else
-    if num2 < num3
-        return num2
-    else
-        return num3
-    end
-end
 end
 
